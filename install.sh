@@ -12,10 +12,10 @@ until [[ $PORT =~ ^[0-9]+$ ]] && [ "$PORT" -ge 1 ] && [ "$PORT" -le 65535 ]; do
   read -rp "Welcher Port?: " -e -i 51820 PORT
 done
 until [[ $WIREGUARD != "" ]]; do
-  read -rp "Welcher IP-Bereich für das Wireguard Netzwerk" -e -i 10.0.0.0 WIREGUARD
+  read -rp "Welcher IP-Bereich für das Wireguard Netzwerk?: " -e -i 10.0.0.0 WIREGUARD
 done
 until [[ $HELIUMCLIENT != "" ]]; do
-  read -rp "Wie ist die Helium Miner Wireguard Client IP?" -e -i 10.0.0.2 HELIUMCLIENT
+  read -rp "Wie ist die Helium Miner Wireguard Client IP?: " -e -i 10.0.0.2 HELIUMCLIENT
 done
 
 ## Lösche ufw Firewall und flush iptables
