@@ -49,4 +49,8 @@ nano /etc/wireguard/wg0.conf
 
 systemctl enable wg-quick@wg0.service
 systemctl start wg-quick@wg0.service
+
+## Zeige Status Wireguard und zeige Firewall-Regeln
 systemctl status wg-quick@wg0.service
+iptables -S
+iptables -t nat -L
