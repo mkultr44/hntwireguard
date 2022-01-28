@@ -1,5 +1,10 @@
 #!/bin/bash
 
+## System updaten
+
+apt update -y
+apt upgrade -y
+
 ## Abfrage nach Port und Netzwerk
 
 echo ""
@@ -15,7 +20,7 @@ done
 
 ## Lösche ufw Firewall und flush iptables
 
-apt remove -y --purge ufw
+apt purge ufw
 iptables -F
 iptables -X
 
