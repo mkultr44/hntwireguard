@@ -20,7 +20,7 @@ done
 
 ## Lösche ufw Firewall und flush iptables
 
-apt purge ufw
+apt purge -y ufw
 iptables -F
 iptables -X
 
