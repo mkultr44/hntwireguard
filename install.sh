@@ -22,7 +22,7 @@ done
 
 systemctl stop ufw
 systemctl disable ufw
-apt purge -y ufw
+apt remove -y ufw
 iptables -F
 iptables -X
 
