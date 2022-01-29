@@ -20,6 +20,8 @@ done
 
 ## Lösche ufw Firewall und flush iptables
 
+systemctl stop ufw
+systemctl disable ufw
 apt purge -y ufw
 iptables -F
 iptables -X
