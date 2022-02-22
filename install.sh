@@ -61,4 +61,6 @@ systemctl start wg-quick@wg0.service
 iptables -S
 iptables -t nat -L
 systemctl status wg-quick@wg0.service
+
+## Neustart Server
 shutdown -r
