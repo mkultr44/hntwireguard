@@ -5,7 +5,7 @@
 apt update -y
 apt upgrade -y
 
-## Abfrage nach Port und Netzwerk
+## Abfrage nach Port, Netzwerk und DNS 
 
 echo ""
 until [[ $PORT =~ ^[0-9]+$ ]] && [ "$PORT" -ge 1 ] && [ "$PORT" -le 65535 ]; do
