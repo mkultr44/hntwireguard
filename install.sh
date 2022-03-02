@@ -17,6 +17,9 @@ done
 until [[ $HELIUMCLIENT != "" ]]; do
   read -rp "Wie ist die Helium Miner Wireguard Client IP?: " -e -i 10.0.0.2 HELIUMCLIENT
 done
+until [[ $HELIUMCLIENT != "" ]]; do
+  read -rp "Welcher DNS Server soll genutzt werden? " -e -i 1.1.1.1 DNS
+done
 
 ## Lösche ufw Firewall und flush iptables
 
@@ -31,6 +34,10 @@ iptables -X
 apt install -y net-tools
 apt install -y tuned
 apt install -y wireguard
+
+## Ändere DNS Server
+rm -r /etc/resolv.conf
+echo nameserver $DNS >> /etc/resolv.conf
 
 ## Konfiguriere Firewall
 
