@@ -70,5 +70,5 @@ iptables -t nat -L
 systemctl status wg-quick@wg0.service
 
 ## Neustart Server
-echo "Server is rebooting..."
+echo "Server startet neu..."
 shutdown -r now
